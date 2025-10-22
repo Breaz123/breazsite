@@ -11,11 +11,34 @@ export default function HomePage() {
     <>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Tech Background */}
+        {/* Enhanced Glass Background */}
+        <div className="hero-glass-bg" />
+        
+        {/* Tech Figures */}
+        <div className="tech-figures">
+          <div className="tech-figure tech-figure-1" />
+          <div className="tech-figure tech-figure-2" />
+          <div className="tech-figure tech-figure-3" />
+          <div className="tech-figure tech-figure-4" />
+          <div className="tech-figure tech-figure-5" />
+          <div className="tech-figure tech-figure-6" />
+        </div>
+
+        {/* Floating Dots */}
+        <div className="floating-dots">
+          <div className="floating-dot" />
+          <div className="floating-dot" />
+          <div className="floating-dot" />
+          <div className="floating-dot" />
+          <div className="floating-dot" />
+          <div className="floating-dot" />
+        </div>
+
+        {/* Enhanced Floating Orbs */}
         <div className="tech-hero-bg">
-          <div className="tech-orb tech-orb-1" />
-          <div className="tech-orb tech-orb-2" />
-          <div className="tech-orb tech-orb-3" />
+          <div className="glass-orb glass-orb-1" />
+          <div className="glass-orb glass-orb-2" />
+          <div className="glass-orb glass-orb-3" />
         </div>
 
         {/* Content */}
@@ -33,7 +56,7 @@ export default function HomePage() {
               className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl"
             >
               Groei begint bij{" "}
-              <span className="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent glow-text">
                 mensen.
               </span>
             </motion.h1>
@@ -59,9 +82,9 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.35 }}
-                className="card-3d rounded-xl h-full"
+                className="group relative rounded-xl h-full"
               >
-                <div className="card-3d-inner rounded-xl p-6 text-center h-full flex items-center justify-center">
+                <div className="glass-card rounded-xl p-6 text-center h-full flex items-center justify-center transition-all duration-300 group-hover:scale-105">
                   <p className="text-base text-foreground/90 font-medium relative z-10">
                     Marketing die klanten aantrekt, niet opjaagt.
                   </p>
@@ -72,9 +95,9 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
-                className="card-3d rounded-xl h-full"
+                className="group relative rounded-xl h-full"
               >
-                <div className="card-3d-inner rounded-xl p-6 text-center h-full flex items-center justify-center">
+                <div className="glass-card rounded-xl p-6 text-center h-full flex items-center justify-center transition-all duration-300 group-hover:scale-105">
                   <p className="text-base text-foreground/90 font-medium relative z-10">
                     Sales die luistert en overtuigt.
                   </p>
@@ -85,9 +108,9 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.45 }}
-                className="card-3d rounded-xl h-full"
+                className="group relative rounded-xl h-full"
               >
-                <div className="card-3d-inner rounded-xl p-6 text-center h-full flex items-center justify-center">
+                <div className="glass-card rounded-xl p-6 text-center h-full flex items-center justify-center transition-all duration-300 group-hover:scale-105">
                   <p className="text-base text-foreground/90 font-medium relative z-10">
                     Business development dat duurzame relaties bouwt.
                   </p>
@@ -118,7 +141,7 @@ export default function HomePage() {
       </section>
 
       {/* Waarom Breaz */}
-      <Section className="bg-blue-50/50 dark:bg-blue-950/20">
+      <Section className="bg-blue-50/50 dark:bg-blue-950/20 section-glass-bg">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -156,8 +179,16 @@ export default function HomePage() {
       </Section>
 
       {/* De drie pijlers */}
-      <Section>
-        <div className="container">
+      <Section className="pillars-section">
+        {/* Floating Elements */}
+        <div className="pillars-floating-elements">
+          <div className="pillar-floating-element pillar-floating-element-1" />
+          <div className="pillar-floating-element pillar-floating-element-2" />
+          <div className="pillar-floating-element pillar-floating-element-3" />
+          <div className="pillar-floating-element pillar-floating-element-4" />
+        </div>
+
+        <div className="container relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -165,7 +196,7 @@ export default function HomePage() {
             transition={{ duration: 0.5 }}
             className="mx-auto mb-16 max-w-3xl text-center"
           >
-            <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+            <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl glow-text">
               De drie pijlers van Breaz
             </h2>
           </motion.div>
@@ -176,17 +207,16 @@ export default function HomePage() {
                 key={pillar.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                whileHover={{ y: -8, transition: { duration: 0.3 } }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative rounded-xl transition-all hover:shadow-xl flex"
+                className="group relative rounded-xl flex"
               >
                 {/* Card content */}
-                <div className="relative rounded-xl border border-border bg-card p-8 w-full flex flex-col overflow-hidden">
+                <div className="relative pillar-card rounded-xl p-8 w-full flex flex-col overflow-hidden">
                   {/* Animated shine traveling along borders */}
                   <span className="border-shine-line" style={{ animationDelay: `${index * 0.5}s` }} />
                   
-                  <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                  <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg pillar-icon text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                     {pillar.icon}
                   </div>
                   <h3 className="mb-3 text-2xl font-bold">{pillar.title}</h3>
@@ -208,7 +238,7 @@ export default function HomePage() {
       </Section>
 
       {/* Onze aanpak */}
-      <Section className="bg-yellow-50/30 dark:bg-yellow-950/10">
+      <Section className="bg-yellow-50/30 dark:bg-yellow-950/10 section-glass-bg">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -258,7 +288,7 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="relative overflow-hidden rounded-xl border bg-card p-8 shadow-sm"
+                className="relative overflow-hidden glass-card rounded-xl p-8 shadow-sm"
               >
                 <div className="mb-4 text-4xl text-primary/20">"</div>
                 <p className="mb-6 text-lg leading-relaxed italic">
@@ -277,14 +307,14 @@ export default function HomePage() {
       </Section>
 
       {/* CTA Section */}
-      <Section className="bg-orange-50/30 dark:bg-orange-950/10">
+      <Section className="bg-orange-50/30 dark:bg-orange-950/10 section-glass-bg">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-primary to-blue-600 px-8 py-16 text-center text-primary-foreground shadow-2xl md:px-16"
+            className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-primary to-blue-600 px-8 py-16 text-center text-primary-foreground shadow-2xl md:px-16 backdrop-blur-sm"
           >
             <div className="relative z-10">
               <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">

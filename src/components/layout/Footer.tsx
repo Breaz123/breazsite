@@ -1,8 +1,49 @@
+'use client'
+
 import Link from "next/link";
 import Image from "next/image";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { useState } from "react";
 
 export function Footer() {
+  const [email, setEmail] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [message, setMessage] = useState('')
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    
+    if (!email) {
+      setMessage('Voer een geldig email adres in')
+      return
+    }
+
+    setIsSubmitting(true)
+    setMessage('')
+
+    try {
+      const response = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      })
+
+      const data = await response.json()
+
+      if (response.ok) {
+        setMessage(data.message)
+        setEmail('')
+      } else {
+        setMessage(data.error || 'Er is een fout opgetreden')
+      }
+    } catch (error) {
+      setMessage('Er is een fout opgetreden bij het verzenden')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
   return (
     <footer className="border-t bg-muted/50">
       <div className="container py-12 md:py-16">
@@ -98,19 +139,28 @@ export function Footer() {
               <p className="text-xs text-muted-foreground mb-4">
                 Schrijf je in voor onze nieuwsbrief
               </p>
-              <form className="space-y-3">
+              <form onSubmit={handleNewsletterSubmit} className="space-y-3">
                 <input
                   type="email"
                   placeholder="je@email.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   className="w-full px-3 py-2 text-sm bg-background border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   required
+                  disabled={isSubmitting}
                 />
                 <button
                   type="submit"
-                  className="w-full px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 rounded-md transition-all"
+                  disabled={isSubmitting}
+                  className="w-full px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 disabled:opacity-50 disabled:cursor-not-allowed rounded-md transition-all"
                 >
-                  Inschrijven
+                  {isSubmitting ? 'Bezig...' : 'Inschrijven'}
                 </button>
+                {message && (
+                  <p className={`text-xs ${message.includes('succesvol') ? 'text-green-600' : 'text-red-600'}`}>
+                    {message}
+                  </p>
+                )}
               </form>
             </div>
           </div>
