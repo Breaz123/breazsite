@@ -4,11 +4,15 @@ import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, Target, TrendingUp, Users, Lightbulb, Heart, Compass } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section } from "@/components/layout/Section";
+import { SEOOptimizer } from "@/components/seo/seo-optimizer";
 import Link from "next/link";
 
 export default function HomePage() {
   return (
     <>
+      {/* SEO Optimization */}
+      <SEOOptimizer pageType="home" />
+      
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Enhanced Glass Background */}
@@ -55,9 +59,9 @@ export default function HomePage() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl"
             >
-              Groei begint bij{" "}
+              Marketing, Sales & Business Development{" "}
               <span className="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent glow-text">
-                mensen.
+                in België
               </span>
             </motion.h1>
 
@@ -67,8 +71,8 @@ export default function HomePage() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="mb-8 text-lg text-muted-foreground sm:text-xl md:text-2xl max-w-3xl mx-auto"
             >
-              Breaz helpt bedrijven sterker verbinden met hun klanten via marketing, sales en business development die wérkt.
-              Geen loze beloftes, maar échte groei door inzicht, strategie en vertrouwen.
+              Breaz is dé specialist in marketing, sales en business development in België. 
+              Wij helpen bedrijven groeien via strategie, customer intimacy en duurzame relaties met een menselijke aanpak.
             </motion.p>
 
             {/* USP's */}
