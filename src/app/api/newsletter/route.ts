@@ -59,10 +59,10 @@ Verzonden op: ${new Date().toLocaleString('nl-BE', {
     `.trim()
 
     // Send email using Resend
-    console.log('Attempting to send email to:', 'info@breaz-it.be')
+    console.log('Attempting to send email to:', 'siemon@breaz-it.be')
     const data = await resend.emails.send({
       from: 'Breaz Website <onboarding@resend.dev>', // You'll need to update this with your verified domain
-      to: ['info@breaz-it.be'],
+      to: ['siemon@breaz-it.be'],
       replyTo: email,
       subject: `📧 Nieuwe nieuwsbrief inschrijving: ${email}`,
       text: emailContent,
