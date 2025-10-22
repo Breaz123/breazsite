@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 export function Footer() {
@@ -8,8 +9,16 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div>
-            <Link href="/" className="inline-block mb-4">
-              <span className="text-2xl font-bold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
+            <Link href="/" className="inline-flex items-center gap-3 mb-4">
+              <Image 
+                src="/logo.png" 
+                alt="Breaz Logo" 
+                width={40} 
+                height={40}
+                className="h-10 w-10"
+                unoptimized
+              />
+              <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent font-orbitron tracking-wider">
                 Breaz
               </span>
             </Link>
@@ -60,24 +69,24 @@ export function Footer() {
               <li className="flex items-start gap-2">
                 <Mail className="mt-0.5 h-4 w-4 flex-shrink-0" />
                 <a
-                  href="mailto:info@breaz.nl"
+                  href="mailto:info@breaz-it.be"
                   className="transition-colors hover:text-foreground"
                 >
-                  info@breaz.nl
+                  info@breaz-it.be
                 </a>
               </li>
               <li className="flex items-start gap-2">
                 <Phone className="mt-0.5 h-4 w-4 flex-shrink-0" />
                 <a
-                  href="tel:+31201234567"
+                  href="tel:+32472500762"
                   className="transition-colors hover:text-foreground"
                 >
-                  +31 20 123 4567
+                  +32/472.500.762
                 </a>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0" />
-                <span>Amsterdam, Nederland</span>
+                <span>Brydenbachlaan 13, 2275 Wechelderzande</span>
               </li>
             </ul>
           </div>

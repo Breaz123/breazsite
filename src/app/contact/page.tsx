@@ -153,7 +153,7 @@ export default function ContactPage() {
                             value={formData.phone}
                             onChange={handleChange}
                             className="w-full px-4 py-2 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"
-                            placeholder="+31 6 12345678"
+                            placeholder="+32/472.500.762"
                           />
                         </div>
                       </div>
@@ -217,10 +217,10 @@ export default function ContactPage() {
                       <div>
                         <p className="font-medium">Telefoon</p>
                         <a
-                          href="tel:+31612345678"
+                          href="tel:+32472500762"
                           className="text-sm text-muted-foreground hover:text-primary transition-colors"
                         >
-                          +31 6 1234 5678
+                          +32/472.500.762
                         </a>
                       </div>
                     </div>
@@ -232,7 +232,8 @@ export default function ContactPage() {
                       <div>
                         <p className="font-medium">Locatie</p>
                         <p className="text-sm text-muted-foreground">
-                          Nederland
+                          Brydenbachlaan 13<br />
+                          2275 Wechelderzande
                         </p>
                       </div>
                     </div>
@@ -260,21 +261,17 @@ export default function ContactPage() {
               <AnimatedSection delay={0.2}>
                 <Card>
                   <CardHeader>
-                    <CardTitle>Werkdagen & Tijden</CardTitle>
+                    <CardTitle>Openingstijden</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-2 text-sm">
                       <div className="flex justify-between">
-                        <span className="text-muted-foreground">Ma - Vr</span>
-                        <span className="font-medium">09:00 - 18:00</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-muted-foreground">Za - Zo</span>
-                        <span className="font-medium">Gesloten</span>
+                        <span className="text-muted-foreground">Elke dag</span>
+                        <span className="font-medium">08:00 - 20:00</span>
                       </div>
                     </div>
                     <p className="text-xs text-muted-foreground mt-4">
-                      We reageren meestal binnen 24 uur op werkdagen.
+                      We reageren meestal binnen 24 uur.
                     </p>
                   </CardContent>
                 </Card>
@@ -312,7 +309,7 @@ export default function ContactPage() {
                 </CardHeader>
                 <CardContent>
                   <Button asChild variant="outline" className="w-full">
-                    <a href="tel:+31612345678">+31 6 1234 5678</a>
+                    <a href="tel:+32472500762">+32/472.500.762</a>
                   </Button>
                 </CardContent>
               </Card>

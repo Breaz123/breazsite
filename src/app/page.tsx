@@ -139,30 +139,37 @@ export default function HomePage() {
             </h2>
           </motion.div>
 
-          <div className="grid gap-8 lg:grid-cols-3">
+          <div className="grid gap-8 lg:grid-cols-3 lg:items-stretch">
             {pillars.map((pillar, index) => (
               <motion.div
                 key={pillar.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ y: -8, transition: { duration: 0.3 } }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative overflow-hidden rounded-xl border bg-card p-8 transition-all hover:shadow-xl"
+                className="group relative rounded-xl transition-all hover:shadow-xl flex"
               >
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                  {pillar.icon}
+                {/* Card content */}
+                <div className="relative rounded-xl border border-border bg-card p-8 w-full flex flex-col overflow-hidden">
+                  {/* Animated shine traveling along borders */}
+                  <span className="border-shine-line" style={{ animationDelay: `${index * 0.5}s` }} />
+                  
+                  <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                    {pillar.icon}
+                  </div>
+                  <h3 className="mb-3 text-2xl font-bold">{pillar.title}</h3>
+                  <h4 className="mb-4 text-lg font-semibold text-primary">{pillar.subtitle}</h4>
+                  <p className="mb-6 text-muted-foreground leading-relaxed flex-grow">{pillar.description}</p>
+                  <ul className="space-y-2">
+                    {pillar.items.map((item) => (
+                      <li key={item} className="flex items-start gap-2">
+                        <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
+                        <span className="text-sm">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <h3 className="mb-3 text-2xl font-bold">{pillar.title}</h3>
-                <h4 className="mb-4 text-lg font-semibold text-primary">{pillar.subtitle}</h4>
-                <p className="mb-6 text-muted-foreground leading-relaxed">{pillar.description}</p>
-                <ul className="space-y-2">
-                  {pillar.items.map((item) => (
-                    <li key={item} className="flex items-start gap-2">
-                      <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
-                      <span className="text-sm">{item}</span>
-                    </li>
-                  ))}
-                </ul>
               </motion.div>
             ))}
           </div>

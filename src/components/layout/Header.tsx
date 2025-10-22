@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useTheme } from "next-themes";
 import { Moon, Sun, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -32,8 +33,19 @@ export function Header() {
       )}
     >
       <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center space-x-2">
-          <span className="text-2xl font-bold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
+        <Link href="/" className="flex items-center space-x-3">
+          <div className="relative h-10 w-10 rounded-lg overflow-hidden bg-white/5 backdrop-blur-sm">
+            <Image 
+              src="/logo.png" 
+              alt="Breaz Logo" 
+              width={40} 
+              height={40}
+              className="h-10 w-10 object-contain p-0.5"
+              priority
+              unoptimized
+            />
+          </div>
+          <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent font-orbitron tracking-wider">
             Breaz
           </span>
         </Link>
