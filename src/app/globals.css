@@ -1199,6 +1199,15 @@ html {
   }
 }
 
+@keyframes scan {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 /* Enhanced mobile menu styles */
 .mobile-menu-tech {
   animation: slideInFromLeft 0.5s ease-out;
