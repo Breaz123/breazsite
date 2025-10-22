@@ -6,7 +6,7 @@ export function Footer() {
   return (
     <footer className="border-t bg-muted/50">
       <div className="container py-12 md:py-16">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
           {/* Brand */}
           <div>
             <Link href="/" className="inline-flex items-center gap-3 mb-4">
@@ -90,6 +90,30 @@ export function Footer() {
               </li>
             </ul>
           </div>
+
+          {/* Newsletter */}
+          <div>
+            <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-lg p-6">
+              <h3 className="mb-3 text-sm font-semibold">Nieuwsbrief</h3>
+              <p className="text-xs text-muted-foreground mb-4">
+                Schrijf je in voor onze nieuwsbrief
+              </p>
+              <form className="space-y-3">
+                <input
+                  type="email"
+                  placeholder="je@email.com"
+                  className="w-full px-3 py-2 text-sm bg-background border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+                <button
+                  type="submit"
+                  className="w-full px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 rounded-md transition-all"
+                >
+                  Inschrijven
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
 
         <div className="mt-12 border-t pt-8">
@@ -134,9 +158,9 @@ const quickLinks = [
 ];
 
 const services = [
-  { label: "Webontwikkeling", href: "/diensten/webontwikkeling" },
-  { label: "Cloud & DevOps", href: "/diensten/cloud-devops" },
-  { label: "Digitale Strategie", href: "/diensten/digitale-strategie" },
-  { label: "Maatwerk Oplossingen", href: "/diensten/maatwerk" },
+  { label: "Marketing", href: "/diensten/marketing" },
+  { label: "Business Development", href: "/diensten/business-development" },
+  { label: "Sales", href: "/diensten/sales" },
+  { label: "Webdevelopment", href: "/diensten/webdevelopment" },
 ];
 

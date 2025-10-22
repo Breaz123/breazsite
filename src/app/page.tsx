@@ -10,8 +10,16 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <Section className="pt-32 pb-16 md:pt-40 md:pb-24">
-        <div className="container">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Tech Background */}
+        <div className="tech-hero-bg">
+          <div className="tech-orb tech-orb-1" />
+          <div className="tech-orb tech-orb-2" />
+          <div className="tech-orb tech-orb-3" />
+        </div>
+
+        {/* Content */}
+        <div className="container relative z-10 py-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -47,21 +55,44 @@ export default function HomePage() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="grid gap-6 md:grid-cols-3 mb-10 max-w-4xl mx-auto"
             >
-              <div className="text-center">
-                <p className="text-base text-foreground/80">
-                  Marketing die klanten aantrekt, niet opjaagt.
-                </p>
-              </div>
-              <div className="text-center">
-                <p className="text-base text-foreground/80">
-                  Sales die luistert en overtuigt.
-                </p>
-              </div>
-              <div className="text-center">
-                <p className="text-base text-foreground/80">
-                  Business development dat duurzame relaties bouwt.
-                </p>
-              </div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.35 }}
+                className="card-3d rounded-xl h-full"
+              >
+                <div className="card-3d-inner rounded-xl p-6 text-center h-full flex items-center justify-center">
+                  <p className="text-base text-foreground/90 font-medium relative z-10">
+                    Marketing die klanten aantrekt, niet opjaagt.
+                  </p>
+                </div>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="card-3d rounded-xl h-full"
+              >
+                <div className="card-3d-inner rounded-xl p-6 text-center h-full flex items-center justify-center">
+                  <p className="text-base text-foreground/90 font-medium relative z-10">
+                    Sales die luistert en overtuigt.
+                  </p>
+                </div>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.45 }}
+                className="card-3d rounded-xl h-full"
+              >
+                <div className="card-3d-inner rounded-xl p-6 text-center h-full flex items-center justify-center">
+                  <p className="text-base text-foreground/90 font-medium relative z-10">
+                    Business development dat duurzame relaties bouwt.
+                  </p>
+                </div>
+              </motion.div>
             </motion.div>
 
             <motion.div
@@ -84,7 +115,7 @@ export default function HomePage() {
             </motion.div>
           </motion.div>
         </div>
-      </Section>
+      </section>
 
       {/* Waarom Breaz */}
       <Section className="bg-blue-50/50 dark:bg-blue-950/20">

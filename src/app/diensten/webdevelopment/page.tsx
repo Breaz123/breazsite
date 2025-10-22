@@ -216,57 +216,47 @@ export default function WebdevelopmentPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-secondary/30">
+      <section className="py-16 bg-gradient-to-br from-primary via-blue-600 to-blue-700">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection>
-            <div className="max-w-4xl mx-auto">
-              <div className="relative group">
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-primary via-blue-600 to-primary rounded-2xl opacity-75 group-hover:opacity-100 blur-sm group-hover:blur transition duration-500"></div>
-                
-                <Card className="relative overflow-hidden border-0 shadow-2xl">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary via-blue-600 to-blue-700"></div>
-                  
-                  <CardContent className="relative p-12 sm:p-16 text-center text-white">
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm mb-8">
-                      <Code className="w-8 h-8 text-white" />
-                    </div>
-
-                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-                      Klaar om digitaal te groeien?
-                    </h2>
-                    <p className="text-lg sm:text-xl mb-10 opacity-95 max-w-2xl mx-auto leading-relaxed">
-                      Of je nu een WordPress-site, een Shopify-shop of een maatwerkproject nodig hebt — wij denken met je mee van concept tot lancering. 
-                      Plan een vrijblijvend gesprek en ontdek wat Breaz voor jouw digitale groei kan betekenen.
-                    </p>
-                    
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                      <Button
-                        asChild
-                        size="lg"
-                        className="text-base bg-white text-primary hover:bg-gray-100 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl font-semibold px-8"
-                      >
-                        <Link href="/contact">
-                          Plan een gesprek
-                          <ArrowRight className="ml-2 h-4 w-4" />
-                        </Link>
-                      </Button>
-                      <Button
-                        asChild
-                        size="lg"
-                        variant="outline"
-                        className="text-base bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary hover:scale-105 transition-all duration-300 font-semibold px-8"
-                      >
-                        <Link href="/aanpak">
-                          Bekijk onze realisaties
-                          <ArrowRight className="ml-2 h-4 w-4" />
-                        </Link>
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
+          <div className="max-w-3xl mx-auto text-center text-white">
+            <AnimatedSection>
+              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm mb-4">
+                <Code className="w-6 h-6 text-white" />
               </div>
-            </div>
-          </AnimatedSection>
+              
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Klaar om digitaal te groeien?
+              </h2>
+              
+              <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
+                Of je nu een WordPress-site, een Shopify-shop of een maatwerkproject nodig hebt — wij denken met je mee van concept tot lancering. Plan een vrijblijvend gesprek en ontdek wat Breaz voor jouw digitale groei kan betekenen.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-white text-primary hover:bg-gray-100 font-semibold"
+                >
+                  <Link href="/contact">
+                    Plan een gesprek
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold"
+                >
+                  <Link href="/aanpak">
+                    Bekijk onze realisaties
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
+            </AnimatedSection>
+          </div>
         </div>
       </section>
     </div>

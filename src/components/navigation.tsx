@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Home, Code, Rocket, Users, Mail, ArrowRight, ChevronDown, Target, TrendingUp, Megaphone, BookOpen, Search, Pen, Zap, Globe, Smartphone, Sparkles } from 'lucide-react'
+import { Menu, X, Home, Code, Rocket, Users, Mail, ArrowRight, ChevronDown, Target, TrendingUp, Megaphone, BookOpen, Search, Pen, Zap, Globe, Smartphone, Sparkles, MessageSquare, BarChart3, Settings, RefreshCw, Lightbulb } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const navItems = [
@@ -50,11 +50,55 @@ const navItems = [
         href: '/diensten/business-development',
         label: 'Business Development',
         icon: TrendingUp,
+        submenu: [
+          {
+            href: '/diensten/business-development/strategische-roadmap-groeiplan',
+            label: 'Strategische Roadmap & Groeiplan',
+            icon: Target,
+          },
+          {
+            href: '/diensten/business-development/markt-concurrentieanalyse',
+            label: 'Markt & Concurrentieanalyse',
+            icon: BarChart3,
+          },
+          {
+            href: '/diensten/business-development/partnerschappen-samenwerkingstrajecten',
+            label: 'Partnerschappen & Samenwerkingstrajecten',
+            icon: Users,
+          },
+          {
+            href: '/diensten/business-development/innovatie-diversificatie',
+            label: 'Innovatie & Diversificatie',
+            icon: Lightbulb,
+          },
+        ]
       },
       {
         href: '/diensten/sales',
         label: 'Sales',
         icon: Users,
+        submenu: [
+          {
+            href: '/diensten/sales/salescoaching-training',
+            label: 'Salescoaching & Training',
+            icon: MessageSquare,
+          },
+          {
+            href: '/diensten/sales/funnelanalyse-conversieoptimalisatie',
+            label: 'Funnelanalyse & Conversieoptimalisatie',
+            icon: BarChart3,
+          },
+          {
+            href: '/diensten/sales/crm-procesondersteuning',
+            label: 'CRM & Procesondersteuning',
+            icon: Settings,
+          },
+          {
+            href: '/diensten/sales/marketing-sales-alignement',
+            label: 'Marketing-Sales Alignement',
+            icon: RefreshCw,
+          },
+        ]
       },
       {
         href: '/diensten/webdevelopment',
@@ -243,6 +287,14 @@ export function Navigation() {
                           transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                         />
                       )}
+                      
+                      {/* Hover Underline Effect */}
+                      <div className="absolute -bottom-px left-0 right-0 h-px overflow-hidden">
+                        <div className={cn(
+                          'h-full w-full bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out',
+                          isActive && 'hidden'
+                        )} />
+                      </div>
                     </Link>
 
                     {/* Dropdown Menu */}
@@ -370,6 +422,14 @@ export function Navigation() {
                                               : 'text-gray-400 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-cyan-400'
                                           )} />
                                         )}
+                                        
+                                        {/* Hover Underline Effect */}
+                                        <div className="absolute bottom-0 left-2 right-2 h-px overflow-hidden">
+                                          <div className={cn(
+                                            'h-full w-full bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out',
+                                            isSubActive && 'hidden'
+                                          )} />
+                                        </div>
                                       </Link>
 
                                       {/* Nested Submenu */}
@@ -454,6 +514,14 @@ export function Navigation() {
                                                               ? 'text-pink-400 opacity-100'
                                                               : 'text-gray-400 opacity-0 group-hover:opacity-70 group-hover:text-pink-400'
                                                           )} />
+                                                          
+                                                          {/* Hover Underline Effect */}
+                                                          <div className="absolute bottom-0 left-2 right-2 h-px overflow-hidden">
+                                                            <div className={cn(
+                                                              'h-full w-full bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out',
+                                                              isNestedActive && 'hidden'
+                                                            )} />
+                                                          </div>
                                                         </Link>
                                                       </motion.div>
                                                     )
@@ -542,6 +610,14 @@ export function Navigation() {
                       transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                     />
                   )}
+                  
+                  {/* Hover Underline Effect */}
+                  <div className="absolute -bottom-px left-0 right-0 h-px overflow-hidden">
+                    <div className={cn(
+                      'h-full w-full bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out',
+                      isActive && 'hidden'
+                    )} />
+                  </div>
                 </Link>
               )
             })}
@@ -549,7 +625,7 @@ export function Navigation() {
 
           {/* CTA Button (Desktop) */}
           <div className="hidden lg:block">
-            <Link href="/contact">
+            <Link href="/start-je-project">
               <motion.button
                 className="relative px-6 py-2.5 rounded-lg font-semibold text-sm text-white overflow-hidden group"
                 whileHover={{ scale: 1.02 }}
@@ -614,7 +690,13 @@ export function Navigation() {
               transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
               className="lg:hidden overflow-hidden"
             >
-              <div className="py-6 space-y-2 border-t border-white/10">
+              <div 
+                className="py-6 space-y-2 border-t border-white/10 bg-[#0B1120]/95 backdrop-blur-2xl backdrop-saturate-150"
+                style={{
+                  backdropFilter: 'blur(20px) saturate(150%)',
+                  WebkitBackdropFilter: 'blur(20px) saturate(150%)',
+                }}
+              >
                 {navItems.map((item, index) => {
                   const Icon = item.icon
                   const isActive = pathname === item.href || (item.submenu && item.submenu.some(sub => 
@@ -851,6 +933,14 @@ export function Navigation() {
                                                                 ? 'text-pink-400 opacity-100'
                                                                 : 'text-gray-400 opacity-0 group-hover:opacity-70 group-hover:text-pink-400'
                                                             )} />
+                                                            
+                                                            {/* Hover Underline Effect */}
+                                                            <div className="absolute bottom-0 left-2 right-2 h-px overflow-hidden">
+                                                              <div className={cn(
+                                                                'h-full w-full bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out',
+                                                                isNestedActive && 'hidden'
+                                                              )} />
+                                                            </div>
                                                           </Link>
                                                         </motion.div>
                                                       )
@@ -924,6 +1014,14 @@ export function Navigation() {
                                                   ? 'text-cyan-400 opacity-100'
                                                   : 'text-gray-400 opacity-0 group-hover:opacity-70 group-hover:text-cyan-400'
                                               )} />
+                                              
+                                              {/* Hover Underline Effect */}
+                                              <div className="absolute bottom-0 left-2 right-2 h-px overflow-hidden">
+                                                <div className={cn(
+                                                  'h-full w-full bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out',
+                                                  isSubActive && 'hidden'
+                                                )} />
+                                              </div>
                                             </Link>
                                           )}
                                         </div>
@@ -989,7 +1087,7 @@ export function Navigation() {
                   transition={{ delay: navItems.length * 0.05 + 0.1 }}
                   className="pt-4"
                 >
-                  <Link href="/contact" onClick={() => setIsOpen(false)}>
+                  <Link href="/start-je-project" onClick={() => setIsOpen(false)}>
                     <button className="w-full relative px-6 py-3 rounded-lg font-semibold text-sm text-white overflow-hidden group">
                       {/* Gradient background */}
                       <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-cyan-600 to-purple-600" />

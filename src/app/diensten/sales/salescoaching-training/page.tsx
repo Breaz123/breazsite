@@ -11,35 +11,40 @@ import {
 import { AnimatedSection } from '@/components/animated-section'
 import { FadeIn } from '@/components/fade-in'
 import {
-  Heart,
+  Users,
   Target,
   Compass,
-  Lightbulb,
-  Users,
+  CheckCircle2,
+  ArrowRight,
+  MessageSquare,
   TrendingUp,
   Sparkles,
-  ArrowRight,
   CircleDot,
+  Heart,
+  Lightbulb,
+  Award,
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Waarom Breaz',
+  title: 'Salescoaching & Training | Breaz - Verkoop begint bij luisteren',
   description:
-    'Ontdek waarom Breaz bestaat, hoe we werken en wat we doen. Van purpose tot praktijk: dit is waar we voor staan.',
+    'Breaz traint je team in moderne verkooptechnieken waarbij empathie en inzicht centraal staan. Van first contact tot close.',
   openGraph: {
     type: 'website',
     locale: 'nl_BE',
-    url: 'https://www.breaz-it.be/team',
+    url: 'https://www.breaz.be/diensten/sales/salescoaching-training',
     siteName: 'Breaz',
-    title: 'Waarom Breaz | Breaz',
+    title: 'Salescoaching & Training | Breaz - Verkoop begint bij luisteren',
     description:
-      'Ontdek waarom Breaz bestaat, hoe we werken en wat we doen. Van purpose tot praktijk: dit is waar we voor staan.',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Waarom Breaz | Breaz',
-    description:
-      'Ontdek waarom Breaz bestaat, hoe we werken en wat we doen. Van purpose tot praktijk: dit is waar we voor staan.',
+      'We trainen je team in moderne verkooptechnieken waarbij empathie en inzicht centraal staan. Van first contact tot close.',
+    images: [
+      {
+        url: '/og-breaz-salescoaching.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Breaz Salescoaching & Training',
+      },
+    ],
   },
 }
 
@@ -49,77 +54,77 @@ const why = {
   title: 'Waarom',
   subtitle: 'Ons doel',
   description:
-    'Wij geloven dat groei begint bij échte verbinding. Te veel bedrijven verliezen zichzelf in data, tactieken en trends, terwijl ze vergeten dat marketing uiteindelijk gaat om mensen die andere mensen helpen. Breaz bestaat om bedrijven te helpen groeien door deze menselijke connectie terug centraal te stellen - zonder resultaten uit het oog te verliezen.',
+    'Wij geloven dat verkoop begint bij luisteren. Te veel sales teams focussen op technieken en scripts, terwijl ze vergeten dat verkopen gaat om het begrijpen van wat klanten écht nodig hebben. Breaz traint teams om menselijke verbindingen te maken die leiden tot duurzame relaties en betere resultaten.',
   impact: [
-    'Bedrijven die groeien op basis van authentieke relaties, niet alleen tactische trucjes',
-    'Marketing die voelt als een gesprek, niet als een verkooppraatje',
-    'Duurzame groei die gebouwd is op vertrouwen en waarde',
+    'Sales teams die écht luisteren naar klanten in plaats van alleen hun pitch af te draaien',
+    'Verkoopgesprekken die voelen als een gesprek, niet als een verkooppraatje',
+    'Duurzame klantrelaties gebouwd op vertrouwen en waarde',
   ],
 }
 
 const how = [
   {
     icon: Heart,
-    title: 'Menselijke aanpak',
+    title: 'Empathie eerst',
     description:
-      'Wij beginnen altijd bij de mens achter de klant. Wat zijn hun echte uitdagingen? Waar liggen ze wakker van? Data geeft inzichten, maar empathie geeft richting.',
-  },
-  {
-    icon: Compass,
-    title: 'Strategische helderheid',
-    description:
-      'Geen wollige plannen of buzzwords. Wij maken strategie tastbaar en actionable, zodat je precies weet waar je naartoe werkt en waarom.',
+      'We leren je team om écht te begrijpen wat klanten beweegt. Niet door vragenlijsten af te werken, maar door oprecht nieuwsgierig te zijn naar hun uitdagingen en ambities.',
   },
   {
     icon: Target,
-    title: 'Resultaatgerichte focus',
+    title: 'Doelgerichte gesprekken',
     description:
-      'Mooie verhalen zijn leuk, maar cijfers liegen niet. Wij meten wat werkt, optimaliseren continu en focussen op impact die bijdraagt aan jouw groei.',
+      'Elk gesprek heeft een doel, maar dat hoeft niet altijd directe verkoop te zijn. We trainen je team om de juiste vragen te stellen op het juiste moment.',
   },
   {
-    icon: Lightbulb,
-    title: 'Nieuwsgierige houding',
+    icon: MessageSquare,
+    title: 'Actief luisteren',
     description:
-      'Elke business is uniek. Wij stellen veel vragen, luisteren actief en zijn altijd benieuwd naar wat er écht speelt in jouw markt en organisatie.',
+      'Luisteren is meer dan wachten tot je weer mag praten. We leren je team om tussen de regels te lezen en de échte behoeften te ontdekken.',
   },
   {
-    icon: Users,
-    title: 'Partnership mindset',
+    icon: Compass,
+    title: 'Situatie-afhankelijke aanpak',
     description:
-      'Wij werken niet voor je, maar met je. Je krijgt direct toegang, eerlijke feedback en proactief meedenken. Geen black box, maar volledige transparantie.',
+      'Geen one-size-fits-all scripts. We trainen je team om hun aanpak aan te passen aan de specifieke situatie en persoon.',
   },
   {
     icon: TrendingUp,
-    title: 'Lange termijn visie',
+    title: 'Resultaatgericht',
     description:
-      'Quick wins zijn mooi, maar wij bouwen aan duurzame groei. Strategie en tactieken die stand houden, ook als de trends weer veranderen.',
+      'Empathie zonder resultaten is nutteloos. We leren je team om menselijke verbindingen om te zetten in concrete business outcomes.',
+  },
+  {
+    icon: Lightbulb,
+    title: 'Continue verbetering',
+    description:
+      'Verkoop is een vak dat je blijft leren. We bouwen een cultuur van reflectie en verbetering in je team.',
   },
 ]
 
 const what = [
   {
-    title: 'Marketing Strategie',
+    title: 'Verkoopgesprek Training',
     description:
-      'Van positionering tot go-to-market: wij helpen je een heldere koers uitzetten die aansluit bij jouw ambitie en markt.',
+      'Van opening tot closing: we trainen je team in alle aspecten van het verkoopgesprek, met focus op luisteren en begrijpen.',
   },
   {
-    title: 'Business Development',
+    title: 'Objectie Handling',
     description:
-      'Groeiprocessen die werken. Van salesfunnels tot customer journeys, afgestemd op jouw business model.',
+      'Objecties zijn kansen om te begrijpen wat klanten écht bezighoudt. We leren je team om objecties om te zetten in gesprekken.',
   },
   {
-    title: 'Content & Campagnes',
+    title: 'Prospect Research',
     description:
-      'Verhalen die resoneren en campagnes die converteren. Van concept tot uitvoering, data-gedreven maar menselijk.',
+      'Goede voorbereiding is het halve werk. We leren je team hoe ze zich kunnen voorbereiden op gesprekken die écht impact hebben.',
   },
   {
-    title: 'Web Development',
+    title: 'Follow-up Strategieën',
     description:
-      'Websites en platformen die niet alleen mooi zijn, maar ook bijdragen aan jouw groeidoelen en gebruikerservaring.',
+      'De meeste deals worden gesloten na het eerste gesprek. We trainen je team in effectieve follow-up strategieën die waarde toevoegen.',
   },
 ]
 
-export default function TeamPage() {
+export default function SalescoachingPage() {
   return (
     <div className="flex flex-col">
       {/* Hero with Golden Circle Visualization */}
@@ -135,30 +140,30 @@ export default function TeamPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Left: Text Content */}
               <div className="text-center lg:text-left">
-            <FadeIn>
+                <FadeIn>
                   <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white mb-8">
                     <CircleDot className="h-4 w-4" />
                     <span className="text-sm font-medium">
-                      Simon Sinek's Golden Circle
+                      Salescoaching & Training
                     </span>
-              </div>
-            </FadeIn>
+                  </div>
+                </FadeIn>
 
-            <FadeIn delay={0.1}>
+                <FadeIn delay={0.1}>
                   <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight mb-6 text-white">
-                    Het begint met{' '}
+                    Verkoop begint bij{' '}
                     <span className="bg-gradient-to-r from-primary via-blue-400 to-blue-600 bg-clip-text text-transparent">
-                      waarom
+                      luisteren
                     </span>
-              </h1>
-            </FadeIn>
+                  </h1>
+                </FadeIn>
 
-            <FadeIn delay={0.2}>
+                <FadeIn delay={0.2}>
                   <p className="text-xl text-slate-300 mb-8 max-w-2xl">
-                    Ontdek de filosofie achter Breaz. Van purpose tot praktijk,
-                    van overtuiging tot uitvoering.
-              </p>
-            </FadeIn>
+                    We trainen je team in moderne verkooptechnieken waarbij empathie en inzicht centraal staan. 
+                    Van first contact tot close.
+                  </p>
+                </FadeIn>
 
                 <FadeIn delay={0.3}>
                   <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
@@ -169,7 +174,7 @@ export default function TeamPage() {
                       </Link>
                     </Button>
                     <Button asChild size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20">
-                      <Link href="/contact">Neem contact op</Link>
+                      <Link href="/contact">Plan een gesprek</Link>
                     </Button>
                   </div>
                 </FadeIn>
@@ -215,14 +220,13 @@ export default function TeamPage() {
       <section id="why" className="py-32 bg-gradient-to-br from-slate-50 via-primary/5 to-blue-50 relative overflow-hidden">
         {/* Decorative Elements */}
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-blue-600 to-primary" />
-        {/* Lightening overlay to ensure strong contrast on text */}
         <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-white/90 via-white/80 to-white/40" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(59,130,246,0.08),transparent_55%)]" />
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <AnimatedSection>
             <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-16">
+              <div className="text-center mb-16">
                 {/* WHY Circle Badge */}
                 <div className="relative inline-flex items-center justify-center mb-8">
                   <div className="absolute w-32 h-32 rounded-full bg-gradient-to-br from-primary to-blue-600 blur-2xl opacity-50 animate-pulse" />
@@ -233,8 +237,7 @@ export default function TeamPage() {
 
                 <h2 className="text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-slate-900 via-primary to-slate-900 bg-clip-text text-transparent">
                   {why.subtitle}
-              </h2>
-                {/* High-contrast description card for readability */}
+                </h2>
                 <div className="max-w-3xl mx-auto">
                   <Card className="border-0 bg-white/95 backdrop-blur shadow-2xl">
                     <CardContent className="p-6 md:p-8">
@@ -244,27 +247,26 @@ export default function TeamPage() {
                     </CardContent>
                   </Card>
                 </div>
-            </div>
+              </div>
 
               {/* Impact Cards */}
               <div className="grid gap-6 md:grid-cols-3">
                 {why.impact.map((item, index) => (
                   <AnimatedSection key={index} delay={index * 0.1}>
                     <Card className="relative h-full border-0 bg-white/80 backdrop-blur-sm shadow-xl hover:shadow-2xl transition-all duration-300 group overflow-hidden">
-                      {/* Gradient border effect */}
                       <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity" />
                       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-blue-600" />
                       
                       <CardContent className="pt-8 relative z-10">
                         <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-blue-600/20 flex items-center justify-center mb-4">
                           <Sparkles className="h-6 w-6 text-primary" />
-                    </div>
+                        </div>
                         <p className="text-slate-700 leading-relaxed">{item}</p>
-                  </CardContent>
-                </Card>
-              </AnimatedSection>
-            ))}
-          </div>
+                      </CardContent>
+                    </Card>
+                  </AnimatedSection>
+                ))}
+              </div>
             </div>
           </AnimatedSection>
         </div>
@@ -288,11 +290,11 @@ export default function TeamPage() {
               </div>
 
               <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-white">
-                Hoe wij werken
+                Hoe wij trainen
               </h2>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-                De principes en waarden die onze aanpak bepalen. Dit is hoe wij
-                het waarom tot leven brengen.
+                De principes en methodieken die onze training bepalen. Dit is hoe wij
+                verkoopvaardigheden ontwikkelen die écht werken.
               </p>
             </div>
           </AnimatedSection>
@@ -301,7 +303,6 @@ export default function TeamPage() {
             {how.map((item, index) => (
               <AnimatedSection key={item.title} delay={index * 0.1}>
                 <Card className="group h-full border-0 bg-slate-800/50 backdrop-blur-sm hover:bg-slate-800/80 transition-all duration-300 relative overflow-hidden">
-                  {/* Glowing border on hover */}
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/0 to-blue-600/0 group-hover:from-primary/20 group-hover:to-blue-600/20 transition-all duration-300" />
                   <div className="absolute inset-0 border border-slate-700 group-hover:border-primary/50 transition-colors rounded-lg" />
                   
@@ -319,7 +320,6 @@ export default function TeamPage() {
                     </p>
                   </CardContent>
 
-                  {/* Corner accent */}
                   <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 </Card>
               </AnimatedSection>
@@ -347,11 +347,11 @@ export default function TeamPage() {
               </div>
 
               <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-slate-900">
-                Wat wij doen
+                Wat wij trainen
               </h2>
               <p className="text-xl text-slate-700 max-w-3xl mx-auto leading-relaxed">
-                De concrete diensten en oplossingen waarmee wij jouw groeiambities
-                helpen realiseren.
+                De concrete vaardigheden en technieken waarmee wij jouw sales team
+                helpen groeien en betere resultaten behalen.
               </p>
             </div>
           </AnimatedSection>
@@ -360,14 +360,10 @@ export default function TeamPage() {
             {what.map((item, index) => (
               <AnimatedSection key={item.title} delay={index * 0.1}>
                 <Card className="group h-full border-0 bg-white shadow-xl hover:shadow-2xl transition-all duration-500 relative overflow-hidden">
-                  {/* Gradient accent line */}
                   <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-blue-600 to-primary" />
-                  
-                  {/* Hover gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/0 via-transparent to-blue-600/0 group-hover:from-primary/5 group-hover:to-blue-600/5 transition-all duration-500" />
                   
                   <CardHeader className="relative z-10">
-                    {/* Number Badge */}
                     <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full bg-gradient-to-br from-primary to-blue-600 text-white flex items-center justify-center text-2xl font-bold shadow-lg">
                       {index + 1}
                     </div>
@@ -382,7 +378,6 @@ export default function TeamPage() {
                     </p>
                   </CardContent>
 
-                  {/* Bottom right accent */}
                   <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 </Card>
               </AnimatedSection>
@@ -392,8 +387,8 @@ export default function TeamPage() {
           <AnimatedSection delay={0.4}>
             <div className="text-center">
               <Button asChild size="lg" className="group text-lg px-8 shadow-lg hover:shadow-xl transition-all">
-                <Link href="/diensten">
-                  Ontdek alle diensten
+                <Link href="/contact">
+                  Start met training
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
@@ -404,7 +399,6 @@ export default function TeamPage() {
 
       {/* CTA */}
       <section className="relative py-32 bg-gradient-to-br from-slate-950 via-primary/30 to-slate-900 text-white overflow-hidden">
-        {/* Animated background elements */}
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
           <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-600 to-transparent" />
@@ -415,43 +409,41 @@ export default function TeamPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <AnimatedSection>
             <div className="max-w-4xl mx-auto">
-              {/* Golden Circle Mini Visualization */}
               <div className="flex justify-center mb-12">
                 <div className="relative w-32 h-32">
                   <div className="absolute inset-0 rounded-full border-2 border-blue-400/30 animate-ping" />
                   <div className="absolute inset-2 rounded-full border-2 border-primary/40" />
                   <div className="absolute inset-4 rounded-full border-2 border-primary/60" />
                   <div className="absolute inset-6 rounded-full bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center shadow-2xl">
-                    <Heart className="h-8 w-8 text-white" />
+                    <Users className="h-8 w-8 text-white" />
                   </div>
                 </div>
               </div>
 
               <div className="text-center">
                 <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8">
-                  Herken je jezelf{' '}
+                  Klaar om je team{' '}
                   <span className="bg-gradient-to-r from-primary via-blue-400 to-blue-600 bg-clip-text text-transparent">
-                    hierin?
+                    te trainen?
                   </span>
-              </h2>
+                </h2>
                 <p className="text-xl sm:text-2xl mb-12 text-slate-200 leading-relaxed max-w-3xl mx-auto">
-                  Als dit resoneert met jouw visie op groei en marketing, dan
-                  moeten we praten. Laten we ontdekken hoe we samen jouw
-                  ambities waar kunnen maken.
+                  Laten we samen kijken hoe we je sales team kunnen helpen om beter te verkopen 
+                  door écht te luisteren naar wat klanten nodig hebben.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button
-                asChild
-                size="lg"
-                variant="secondary"
+                  <Button
+                    asChild
+                    size="lg"
+                    variant="secondary"
                     className="text-lg px-8 group shadow-2xl hover:shadow-primary/50 transition-all"
-              >
-                <Link href="/contact">
+                  >
+                    <Link href="/contact">
                       Start het gesprek
                       <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </Button>
+                    </Link>
+                  </Button>
                   
                   <Button
                     asChild
@@ -459,14 +451,13 @@ export default function TeamPage() {
                     variant="outline"
                     className="text-lg px-8 bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20 hover:border-white/40"
                   >
-                    <Link href="/diensten">Bekijk diensten</Link>
+                    <Link href="/diensten/sales">Bekijk alle sales diensten</Link>
                   </Button>
                 </div>
 
-                {/* Trust indicators */}
                 <div className="mt-16 pt-8 border-t border-white/10">
                   <p className="text-slate-400 text-sm mb-4">
-                    Vertrouwd door ambitieuze bedrijven
+                    Vertrouwd door ambitieuze sales teams
                   </p>
                   <div className="flex flex-wrap justify-center gap-8 items-center opacity-60">
                     <div className="flex items-center gap-2">
@@ -478,8 +469,8 @@ export default function TeamPage() {
                       <span className="text-sm">Menselijk</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Sparkles className="h-5 w-5" />
-                      <span className="text-sm">Transparant</span>
+                      <Award className="h-5 w-5" />
+                      <span className="text-sm">Bewezen methodiek</span>
                     </div>
                   </div>
                 </div>
@@ -491,4 +482,3 @@ export default function TeamPage() {
     </div>
   )
 }
-

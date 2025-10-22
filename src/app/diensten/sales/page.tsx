@@ -49,24 +49,28 @@ const services = [
     title: 'Salescoaching & training',
     description:
       'We trainen je team in moderne verkooptechnieken waarbij empathie en inzicht centraal staan. Van first contact tot close.',
+    href: '/diensten/sales/salescoaching-training',
   },
   {
     icon: LineChart,
     title: 'Funnelanalyse & conversieoptimalisatie',
     description:
       'We analyseren je salesfunnel en identificeren waar kansen liggen om meer prospects om te zetten in klanten.',
+    href: '/diensten/sales/funnelanalyse-conversieoptimalisatie',
   },
   {
     icon: Settings,
     title: 'CRM & procesondersteuning',
     description:
       'De juiste tools en processen maken het verschil. We helpen je om je CRM optimaal in te zetten en je salesproces te stroomlijnen.',
+    href: '/diensten/sales/crm-procesondersteuning',
   },
   {
     icon: RefreshCw,
     title: 'Marketing–sales alignment',
     description:
       'Marketing en sales werken samen aan één doel: klanten. We zorgen dat beide teams op één lijn zitten en elkaar versterken.',
+    href: '/diensten/sales/marketing-sales-alignement',
   },
 ]
 
@@ -143,16 +147,28 @@ export default function SalesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {services.map((service, index) => (
               <AnimatedSection key={service.title} delay={index * 0.1}>
-                <Card className="h-full hover:shadow-lg transition-shadow duration-300">
-                  <CardHeader>
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                <Card className="h-full hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-1 flex flex-col group/card border-primary/10 hover:border-primary/30 overflow-hidden relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-500"></div>
+                  <CardHeader className="relative">
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover/card:bg-primary/20 group-hover/card:scale-110 transition-all duration-300">
                       <service.icon className="h-6 w-6 text-primary" />
                     </div>
-                    <CardTitle className="text-xl">{service.title}</CardTitle>
+                    <CardTitle className="text-xl group-hover/card:text-primary transition-colors duration-300">{service.title}</CardTitle>
                     <CardDescription className="text-base">
                       {service.description}
                     </CardDescription>
                   </CardHeader>
+                  <CardContent className="mt-auto pt-0 relative">
+                    <Button 
+                      asChild 
+                      className="w-full justify-between group bg-primary/10 hover:bg-primary hover:text-primary-foreground border border-primary/20 hover:border-primary hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 hover:scale-[1.02] font-medium"
+                    >
+                      <Link href={service.href}>
+                        <span className="font-semibold">Ontdek meer</span>
+                        <ArrowRight className="h-4 w-4 group-hover:translate-x-2 transition-all duration-300" />
+                      </Link>
+                    </Button>
+                  </CardContent>
                 </Card>
               </AnimatedSection>
             ))}
