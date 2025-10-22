@@ -22,6 +22,7 @@ import {
   Zap,
   Globe,
   Award,
+  Search,
 } from 'lucide-react'
 
 export const metadata: Metadata = {
