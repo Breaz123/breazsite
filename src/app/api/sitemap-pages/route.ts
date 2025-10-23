@@ -49,7 +49,7 @@ ${pages
   .map(
     (page) => `  <url>
     <loc>${page.url}</loc>
-    <lastmod>${page.lastModified?.toISOString()}</lastmod>
+    <lastmod>${page.lastModified instanceof Date ? page.lastModified.toISOString() : page.lastModified}</lastmod>
     <changefreq>${page.changeFrequency}</changefreq>
     <priority>${page.priority}</priority>
   </url>`

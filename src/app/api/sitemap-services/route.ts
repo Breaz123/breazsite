@@ -139,7 +139,7 @@ ${services
   .map(
     (service) => `  <url>
     <loc>${service.url}</loc>
-    <lastmod>${service.lastModified?.toISOString()}</lastmod>
+    <lastmod>${service.lastModified instanceof Date ? service.lastModified.toISOString() : service.lastModified}</lastmod>
     <changefreq>${service.changeFrequency}</changefreq>
     <priority>${service.priority}</priority>
   </url>`
