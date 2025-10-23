@@ -2,7 +2,7 @@
   "name": "breaz-website",
   "version": "1.0.0",
   "private": true,
-  "description": "Breaz - Innovatieve digitale oplossingen voor moderne bedrijven",
+  "description": "Breaz - Innovatieve digitale oplossingen voor moderne bedrijven - Updated for Node.js 22.x",
   "author": "Breaz",
   "license": "UNLICENSED",
   "scripts": {
